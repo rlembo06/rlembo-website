@@ -9,13 +9,15 @@ const { Content: AContent } = Layout;
 
 type BreadcrumbItem = { label: string; url: string };
 
-type ContentProps = { children: ReactNode; router: NextRouter };
+type ContentProps = { children: ReactNode; router?: NextRouter };
 
 const Content = ({ children, router }: ContentProps) => {
   const t = useTranslation();
 
-  const pathSnippets: string[] = router?.pathname?.split('/').filter((item: string) => !!item);
-  const extraBreadcrumbItems: BreadcrumbItem[] = pathSnippets.reduce(
+  const pathSnippets: string[] | undefined = router?.pathname
+    ?.split('/')
+    .filter((item: string) => !!item);
+  const extraBreadcrumbItems: BreadcrumbItem[] | undefined = pathSnippets?.reduce(
     (acc: BreadcrumbItem[], pathSnippet: string, index: number) => [
       ...acc,
       {
@@ -30,7 +32,7 @@ const Content = ({ children, router }: ContentProps) => {
     <AContent className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
       <RLBreadcrumb>
         <RLBreadcrumb.Item href={`/`}>{t.t('other.Home')}</RLBreadcrumb.Item>
-        {extraBreadcrumbItems.map(({ label, url }: BreadcrumbItem) => (
+        {(extraBreadcrumbItems || []).map(({ label, url }: BreadcrumbItem) => (
           <RLBreadcrumb.Item key={label} href={url}>
             {label}
           </RLBreadcrumb.Item>
