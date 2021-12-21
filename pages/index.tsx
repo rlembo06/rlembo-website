@@ -1,5 +1,9 @@
+import { withRouter, NextRouter } from 'next/router';
+
 import { Layout } from '@/layout';
 
-const Home = () => <Layout>Home</Layout>;
+type HomeProps = { router: NextRouter };
 
-export default Home;
+const Home = ({ router }: HomeProps) => <Layout router={router}>Home</Layout>;
+
+export default withRouter(Home);

@@ -8,7 +8,9 @@ import { RLMenu } from '@/components';
 
 const { Header: AHeader } = Layout;
 
-const Header = () => (
+type HeaderProps = {};
+
+const Header = ({}: HeaderProps) => (
   <AHeader style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
     <div className="logo" />
     <RLMenu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
@@ -21,4 +23,5 @@ const Header = () => (
   </AHeader>
 );
 
+export type { HeaderProps };
 export default Header;

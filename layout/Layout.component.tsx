@@ -1,16 +1,16 @@
 import { Layout as ALayout } from 'antd';
 
-import type { ContentProps } from './components';
+import type { ContentProps, HeaderProps } from './components';
 
 import { Content, Header, Footer } from './components';
 
-export type LayoutProps = ContentProps;
+export type LayoutProps = ContentProps & HeaderProps;
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children, router }: LayoutProps) => {
   return (
     <ALayout>
       <Header />
-      <Content>{children}</Content>
+      <Content router={router}>{children}</Content>
       <Footer />
     </ALayout>
   );
