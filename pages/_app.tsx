@@ -2,9 +2,9 @@ import type { AppProps } from 'next/app';
 
 import { withTranslation } from 'react-i18next';
 
-import localization from '../localization';
+import localization from '@/localization';
 
-import '../styles/globals.less';
+import '@/styles/globals.less';
 
 localization();
 
