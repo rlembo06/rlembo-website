@@ -1,6 +1,7 @@
 import { NextRouter } from 'next/router';
 import { Layout } from 'antd';
 import { ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { RLBreadcrumb } from '@/components/Breadcrumb';
 
@@ -11,8 +12,10 @@ type BreadcrumbItem = { label: string; url: string };
 type ContentProps = { children: ReactNode; router: NextRouter };
 
 const Content = ({ children, router }: ContentProps) => {
+  const t = useTranslation();
+
   const pathSnippets: string[] = router?.pathname?.split('/').filter((item: string) => !!item);
-  const breadcrumbItemsList: BreadcrumbItem[] = pathSnippets.reduce(
+  const extraBreadcrumbItems: BreadcrumbItem[] = pathSnippets.reduce(
     (acc: BreadcrumbItem[], pathSnippet: string, index: number) => [
       ...acc,
       {
@@ -25,15 +28,14 @@ const Content = ({ children, router }: ContentProps) => {
 
   return (
     <AContent className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-      {breadcrumbItemsList?.length > 0 && (
-        <RLBreadcrumb>
-          {breadcrumbItemsList.map(({ label, url }: BreadcrumbItem) => (
-            <RLBreadcrumb.Item key={label} href={url}>
-              {label}
-            </RLBreadcrumb.Item>
-          ))}
-        </RLBreadcrumb>
-      )}
+      <RLBreadcrumb>
+        <RLBreadcrumb.Item href={`/`}>{t.t('other.Home')}</RLBreadcrumb.Item>
+        {extraBreadcrumbItems.map(({ label, url }: BreadcrumbItem) => (
+          <RLBreadcrumb.Item key={label} href={url}>
+            {label}
+          </RLBreadcrumb.Item>
+        ))}
+      </RLBreadcrumb>
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         {children}
       </div>
