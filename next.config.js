@@ -10,7 +10,13 @@ module.exports = withAntdLess({
     exportOnlyLocals: false,
   },
 
-  // Other Config Here...
+  // Other config here...
+  images: {
+    // TODO: temp
+    domains: ['zos.alipayobjects.com'],
+  },
+
+  // Other Webpack config here...
   webpack(config) {
     return config;
   },

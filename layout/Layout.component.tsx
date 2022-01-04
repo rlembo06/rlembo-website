@@ -1,14 +1,18 @@
+import type { LayoutProps as ALayoutProps } from 'antd';
+
 import { Layout as ALayout } from 'antd';
 
 import type { ContentProps, HeaderProps } from './components';
 
 import { Content, Header, Footer } from './components';
 
-export type LayoutProps = ContentProps & HeaderProps;
+import styles from './Layout.module.less';
+
+export type LayoutProps = ALayoutProps & ContentProps & HeaderProps;
 
 const Layout = ({ children, router }: LayoutProps) => {
   return (
-    <ALayout>
+    <ALayout className={styles.container}>
       <Header />
       <Content router={router}>{children}</Content>
       <Footer />

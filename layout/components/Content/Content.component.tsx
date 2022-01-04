@@ -3,7 +3,7 @@ import { Layout } from 'antd';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { RLBreadcrumb } from '@/components/Breadcrumb';
+// import { RLBreadcrumb } from '@/components/Breadcrumb';
 
 const { Content: AContent } = Layout;
 
@@ -30,14 +30,14 @@ const Content = ({ children, router }: ContentProps) => {
 
   return (
     <AContent className="site-layout" style={{ padding: '0 50px', marginTop: 64 }}>
-      <RLBreadcrumb>
+      {/* <RLBreadcrumb>
         <RLBreadcrumb.Item href={`/`}>{t.t('other.Home')}</RLBreadcrumb.Item>
         {(extraBreadcrumbItems || []).map(({ label, url }: BreadcrumbItem) => (
           <RLBreadcrumb.Item key={label} href={url}>
             {label}
           </RLBreadcrumb.Item>
         ))}
-      </RLBreadcrumb>
+      </RLBreadcrumb> */}
       <div className="site-layout-background" style={{ padding: 24, minHeight: 380 }}>
         {children}
       </div>

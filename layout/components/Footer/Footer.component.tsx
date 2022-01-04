@@ -1,7 +1,13 @@
+import type { LayoutProps as ALayoutProps } from 'antd';
+
 import { Layout } from 'antd';
+
+import styles from './Footer.module.less';
 
 const { Footer: AFooter } = Layout;
 
-const Footer = () => <AFooter style={{ textAlign: 'center' }}>RL Website</AFooter>;
+type FooterProps = ALayoutProps;
+
+const Footer = ({}: FooterProps) => <AFooter className={styles.container}>RL Website</AFooter>;
 
 export default Footer;

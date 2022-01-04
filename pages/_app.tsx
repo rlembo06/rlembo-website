@@ -11,7 +11,7 @@ localization();
 
 const App = ({ Component, pageProps }: AppProps) => (
   <Layout>
-    <Component {...pageProps} />;
+    <Component {...pageProps} />
   </Layout>
 );
 
