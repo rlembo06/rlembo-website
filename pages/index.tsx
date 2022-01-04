@@ -6,7 +6,7 @@ import styles from './Home.module.less';
 type HomeProps = { router: NextRouter };
 
 const Home = ({}: HomeProps) => (
-  <div className={styles.container}>
+  <div className={styles.container} style={{ height: '150vh' }}>
     <Image
       className={styles.image}
       src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"

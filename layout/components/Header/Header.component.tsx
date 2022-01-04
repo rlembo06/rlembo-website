@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import Link from 'next/link';
 import { Layout } from 'antd';
 
@@ -12,18 +14,31 @@ type HeaderProps = {};
 
 import styles from './Header.module.less';
 
-const Header = ({}: HeaderProps) => (
-  <AHeader className={styles.container}>
-    <div className="logo" />
-    <RLMenu className={styles.container} mode="horizontal" defaultSelectedKeys={['2']}>
-      {routes.map(({ to, name }: Route) => (
-        <RLMenu.Item key={name}>
-          <Link href={to}>{name}</Link>
-        </RLMenu.Item>
-      ))}
-    </RLMenu>
-  </AHeader>
-);
+const Header = ({}: HeaderProps) => {
+  const [scrolling, setScrolling] = useState<boolean>(false);
+
+  const listenToScroll = (): void => {
+    const winScroll: number = document.body.scrollTop || document.documentElement.scrollTop;
+    setScrolling(winScroll > 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenToScroll);
+  }, []);
+
+  return (
+    <AHeader className={`${styles.container} ${!scrolling ? styles.scrolling : ''}`}>
+      <div className="logo" />
+      <RLMenu className={styles.menu} mode="horizontal" defaultSelectedKeys={['2']}>
+        {routes.map(({ to, name }: Route) => (
+          <RLMenu.Item key={name}>
+            <Link href={to}>{name}</Link>
+          </RLMenu.Item>
+        ))}
+      </RLMenu>
+    </AHeader>
+  );
+};
 
 export type { HeaderProps };
 export default Header;
