@@ -10,10 +10,12 @@ const { Header: AHeader } = Layout;
 
 type HeaderProps = {};
 
+import styles from './Header.module.less';
+
 const Header = ({}: HeaderProps) => (
-  <AHeader style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+  <AHeader className={styles.container}>
     <div className="logo" />
-    <RLMenu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+    <RLMenu className={styles.container} mode="horizontal" defaultSelectedKeys={['2']}>
       {routes.map(({ to, name }: Route) => (
         <RLMenu.Item key={name}>
           <Link href={to}>{name}</Link>
