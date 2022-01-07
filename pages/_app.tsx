@@ -5,7 +5,8 @@ import { withTranslation } from 'react-i18next';
 import { Layout } from '@/layout';
 import localization from '@/localization';
 
-import '@/styles/globals.less';
+import 'antd/dist/antd.less';
+import '@/styles/globals.css';
 
 localization();
 
