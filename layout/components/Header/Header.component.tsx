@@ -28,7 +28,13 @@ const Header = ({}: HeaderProps) => {
 
   return (
     <AHeader className={`${styles.container} ${!scrolling ? styles.scrolling : ''}`}>
-      <div className="logo" />
+      <div className={styles.logo}>
+        <Link href={routes.find((route: Route) => ['Home'].includes(route.name))?.name || '/'}>
+          <>
+            Romain <b>LEMBO</b>
+          </>
+        </Link>
+      </div>
       <RLMenu className={styles.menu} mode="horizontal" defaultSelectedKeys={['2']}>
         {routes.map(({ to, name }: Route) => (
           <RLMenu.Item key={name}>
