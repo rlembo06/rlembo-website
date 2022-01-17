@@ -1,12 +1,12 @@
 type Item = {
-  label: string;
+  company: string;
   startDate: number;
   endDate?: number;
   position: string;
   city: string;
   description: string;
   logo: string;
-  technos: {
+  stack?: {
     front?: string[];
     back?: string[];
     infrastructure?: string[];

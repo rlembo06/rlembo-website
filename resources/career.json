@@ -1,14 +1,14 @@
 {
   "list": [
     {
-      "label": "Vulog",
+      "company": "Vulog",
       "startDate": 1505491051,
       "endDate": 1594825087,
-      "position": "",
+      "position": "Front-End React Engineer",
       "city": "Nice",
       "description": "",
       "logo": "",
-      "technos": {
+      "stack": {
         "front": ["React", "Node", "Jest", "Storybook", "i18next"],
         "back": ["Java"],
         "infrastructure": ["Jenkins", "Nginx"],
@@ -17,14 +17,14 @@
       }
     },
     {
-      "label": "Realist",
+      "company": "Realist",
       "startDate": 1599836287,
       "endDate": 1609430287,
-      "position": "",
+      "position": "Front-End React Engineer",
       "city": "Paris",
       "description": "",
       "logo": "",
-      "technos": {
+      "stack": {
         "front": ["React", "Node", "Storybook", "i18next", "TypeScript", "ESLint"],
         "back": [".NET"],
         "test": ["Jest"],
@@ -36,13 +36,13 @@
       }
     },
     {
-      "label": "Calldesk",
+      "company": "Calldesk",
       "startDate": 1610985487,
       "position": "Full-stack JavaScript Engineer",
       "city": "Paris",
       "description": "",
       "logo": "",
-      "technos": {
+      "stack": {
         "front": ["React", "Node", "Storybook", "i18next"],
         "back": ["Node", "Lambda"],
         "test": ["Mocha"],
