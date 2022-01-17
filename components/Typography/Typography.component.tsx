@@ -3,7 +3,7 @@ import type { TypographyProps } from 'antd';
 import { ReactNode } from 'react';
 import { Typography } from 'antd';
 
-type RLTypographyProps = TypographyProps & { children: ReactNode[] };
+type RLTypographyProps = TypographyProps & { children: ReactNode[] | ReactNode };
 
 const RLTypography = (props: RLTypographyProps) => <Typography {...props} />;
 

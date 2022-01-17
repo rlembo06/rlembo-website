@@ -26,8 +26,12 @@
       "@/localization": ["./localization"],
       "@/pages/*": ["./pages/*"],
       "@/pages": ["./pages"],
+      "@/resources/*": ["./resources/*"],
+      "@/resources": ["./resources"],
       "@/styles/*": ["./styles/*"],
-      "@/styles": ["./styles"]
+      "@/styles": ["./styles"],
+      "@/types/*": ["./types/*"],
+      "@/types": ["./types"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

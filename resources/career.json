@@ -1,0 +1,58 @@
+{
+  "list": [
+    {
+      "label": "Vulog",
+      "startDate": 1505491051,
+      "endDate": 1594825087,
+      "position": "",
+      "city": "Nice",
+      "description": "",
+      "logo": "",
+      "technos": {
+        "front": ["React", "Node", "Jest", "Storybook", "i18next"],
+        "back": ["Java"],
+        "infrastructure": ["Jenkins", "Nginx"],
+        "cicd": ["Gitlab"],
+        "database": ["MongoDB"]
+      }
+    },
+    {
+      "label": "Realist",
+      "startDate": 1599836287,
+      "endDate": 1609430287,
+      "position": "",
+      "city": "Paris",
+      "description": "",
+      "logo": "",
+      "technos": {
+        "front": ["React", "Node", "Storybook", "i18next", "TypeScript", "ESLint"],
+        "back": [".NET"],
+        "test": ["Jest"],
+        "build": ["Webpack"],
+        "quality": ["ESlint", "TypeScript"],
+        "cloud": ["Azure"],
+        "database": ["MySQL"],
+        "cicd": ["Azure"]
+      }
+    },
+    {
+      "label": "Calldesk",
+      "startDate": 1610985487,
+      "position": "Full-stack JavaScript Engineer",
+      "city": "Paris",
+      "description": "",
+      "logo": "",
+      "technos": {
+        "front": ["React", "Node", "Storybook", "i18next"],
+        "back": ["Node", "Lambda"],
+        "test": ["Mocha"],
+        "build": ["Webpack"],
+        "quality": ["ESlint", "Flow"],
+        "cloud": ["AWS"],
+        "database": ["RDS", "DynamoDB"],
+        "storage": ["AWS S3"],
+        "cicd": ["AWS CodePipeline"]
+      }
+    }
+  ]
+}
