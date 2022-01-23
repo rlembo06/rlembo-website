@@ -1,5 +1,5 @@
 import { withRouter, NextRouter } from 'next/router';
-import { Skeleton, Descriptions, Tabs } from 'antd';
+import { Skeleton, Descriptions, Tabs, Image } from 'antd';
 
 import type { CareerType } from '@/types';
 
@@ -15,28 +15,24 @@ const Career = ({}: CareerProps) => {
       {(career.list || []).map((item: CareerType.Item) => (
         <RLTimeline.Item key={item.company}>
           <RLCard
-            title={item.position}
+            title={
+              <>
+                <Image width={120} src={item.logo} alt={`${item.position} - ${item.company}`} />
+                <span>{`${item.position} - ${item.company}`}</span>
+              </>
+            }
             bordered={false}
             loading={isFetching}
             headStyle={{ color: 'var(--text-color)' }}
           >
             <Skeleton loading={isFetching} avatar active>
+              {/* <Image width={200} src={item.logo} /> */}
               <Tabs defaultActiveKey="1" tabPosition="right">
                 <Tabs.TabPane key="1" tab="Stack">
-                  <Descriptions
-                    title={item.company}
-                    layout="horizontal"
-                    contentStyle={{ color: 'var(--text-color)' }}
-                    labelStyle={{ color: 'var(--text-color)' }}
-                  >
-                    <Descriptions.Item label="Stack">
-                      <code>{JSON.stringify(item.stack)}</code>
-                    </Descriptions.Item>
-                  </Descriptions>
+                  <code>{JSON.stringify(item.stack)}</code>
                 </Tabs.TabPane>
                 <Tabs.TabPane key="2" tab="Information">
                   <Descriptions
-                    title={item.company}
                     layout="horizontal"
                     contentStyle={{ color: 'var(--text-color)' }}
                     labelStyle={{ color: 'var(--text-color)' }}
@@ -45,6 +41,7 @@ const Career = ({}: CareerProps) => {
                     <Descriptions.Item label="End at">
                       {item.endDate || 'Current'}
                     </Descriptions.Item>
+                    <Descriptions.Item label="City">{item.city}</Descriptions.Item>
                     <Descriptions.Item label="Description">{item.description}</Descriptions.Item>
                   </Descriptions>
                 </Tabs.TabPane>

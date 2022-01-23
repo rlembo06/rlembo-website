@@ -7,7 +7,7 @@
       "position": "Front-End React Engineer",
       "city": "Nice",
       "description": "",
-      "logo": "",
+      "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQGFKAElVhe_VQ/company-logo_100_100/0/1587464450886?e=1650499200&v=beta&t=IqmX89aERoq1pC4ZYdAnQz_QlRzWHDwUWlB_bSpzVxM",
       "stack": {
         "front": ["React", "Node", "Jest", "Storybook", "i18next"],
         "back": ["Java"],
@@ -23,7 +23,7 @@
       "position": "Front-End React Engineer",
       "city": "Paris",
       "description": "",
-      "logo": "",
+      "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQFxLgOCW-YE1Q/company-logo_100_100/0/1612428021495?e=1650499200&v=beta&t=FX0-wKHmIFx_mK2qe9OWxppDdik0Rh8jomjueC3TeKE",
       "stack": {
         "front": ["React", "Node", "Storybook", "i18next", "TypeScript", "ESLint"],
         "back": [".NET"],
@@ -41,7 +41,7 @@
       "position": "Full-stack JavaScript Engineer",
       "city": "Paris",
       "description": "",
-      "logo": "",
+      "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQGIbrafb9MItQ/company-logo_100_100/0/1571237459369?e=1650499200&v=beta&t=_lUWVyNAY4ApUFf5rf2Q4EwNVdxP8ctFUEbAZXZHuEc",
       "stack": {
         "front": ["React", "Node", "Storybook", "i18next"],
         "back": ["Node", "Lambda"],

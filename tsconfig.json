@@ -16,6 +16,8 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
+      "@/assets/*": ["./assets/*"],
+      "@/assets": ["./assets"],
       "@/components/*": ["./components/*"],
       "@/components": ["./components"],
       "@/commons/*": ["./commons/*"],
