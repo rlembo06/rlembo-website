@@ -6,7 +6,7 @@ import type { ContentProps, HeaderProps } from './components';
 
 import { Content, Header, Footer } from './components';
 
-import styles from './Layout.module.less';
+import styles from './Layout.module.scss';
 
 export type LayoutProps = ALayoutProps & ContentProps & HeaderProps;
 

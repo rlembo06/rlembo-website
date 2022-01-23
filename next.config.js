@@ -1,8 +1,9 @@
 // next.config.js
+const path = require('path');
 const withAntdLess = require('next-plugin-antd-less');
 
-module.exports = withAntdLess({
-  lessVarsFilePath: './styles/variables.less',
+const lessConfig = withAntdLess({
+  lessVarsFilePath: './styles/globals.less',
   cssLoaderOptions: {
     mode: 'local',
     localIdentName: '[path][name]__[local]--[hash:base64:5]', // invalid! for Unify getLocalIdent (Next.js / CRA), Cannot set it, but you can rewritten getLocalIdentFn
@@ -21,3 +22,7 @@ module.exports = withAntdLess({
     return config;
   },
 });
+
+module.exports = {
+  ...lessConfig,
+};

@@ -12,7 +12,7 @@ const { Header: AHeader } = Layout;
 
 type HeaderProps = {};
 
-import styles from './Header.module.less';
+import styles from './Header.module.scss';
 
 const Header = ({}: HeaderProps) => {
   const [scrolling, setScrolling] = useState<boolean>(false);

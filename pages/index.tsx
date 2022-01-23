@@ -1,7 +1,7 @@
 import { withRouter, NextRouter } from 'next/router';
 import Image from 'next/image';
 
-import styles from './Home.module.less';
+import styles from './Home.module.scss';
 
 type HomeProps = { router: NextRouter };
 

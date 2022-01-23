@@ -6,7 +6,6 @@ import { Layout } from '@/layout';
 import localization from '@/localization';
 
 import 'antd/dist/antd.less';
-import '@/styles/globals.css';
 
 localization();
 

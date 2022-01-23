@@ -2,7 +2,7 @@ import type { CardProps } from 'antd';
 
 import { Card } from 'antd';
 
-import styles from './Card.module.less';
+import styles from './Card.module.scss';
 
 type RLCardProps = CardProps;
 

@@ -2,7 +2,7 @@ import type { LayoutProps as ALayoutProps } from 'antd';
 
 import { Layout } from 'antd';
 
-import styles from './Footer.module.less';
+import styles from './Footer.module.scss';
 
 const { Footer: AFooter } = Layout;
 
