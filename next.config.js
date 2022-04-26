@@ -14,7 +14,7 @@ const lessConfig = withAntdLess({
   // Other config here...
   images: {
     // TODO: temp
-    domains: ['zos.alipayobjects.com'],
+    domains: ['zos.alipayobjects.com', 'api.notion.com'],
   },
 
   // Other Webpack config here...
@@ -25,4 +25,16 @@ const lessConfig = withAntdLess({
 
 module.exports = {
   ...lessConfig,
+  async rewrites() {
+    return [
+      {
+        source: '/skills',
+        destination: 'https://api.notion.com/v1/databases/0bfc5d164e714a939b0c0be8ff86c1a5',
+      },
+      {
+        source: '/',
+        destination: 'https://api.notion.com/v1/databases/0bfc5d164e714a939b0c0be8ff86c1a5',
+      },
+    ];
+  },
 };
